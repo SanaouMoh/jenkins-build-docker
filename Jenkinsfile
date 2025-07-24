@@ -5,7 +5,7 @@ node {
 	echo "IMAGE = $IMAGE"
 	
     stage('Clone') {
-        chechout scm
+        checkout scm
     }
 
     def img = stage('Build') {
