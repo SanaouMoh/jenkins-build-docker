@@ -19,7 +19,7 @@ node {
     }
 
     stage('Push') {
-        docker.withRegistry('https://ghcr.io', 'github-push-pat') {
+        docker.withRegistry('https://ghcr.io', 'jenkins-docker-push') {
             img.push 'latest'
             img.push()
         }
